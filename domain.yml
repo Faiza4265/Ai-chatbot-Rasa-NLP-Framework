@@ -1,0 +1,649 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- continue
+- greet
+- faq
+- goodbye
+- affirm1
+- deny1
+- email
+- name
+- blood_group
+- gender
+- address
+- feelingsickcold
+- thankyou
+- nlu_fallback
+- question
+- sympthon
+- choose_time
+- password
+- username
+- treatment
+- itching_initial
+- restlnes_initial
+- vomitting_initial
+- yellowingofeye_initial
+- register
+- sign_in
+- another_sickness
+
+entities:
+- address
+- blood_group
+- email
+- name
+- gender
+- username
+- password
+- time
+- drug
+- age
+
+slots:
+  affirm1:
+    type: any
+    influence_conversation: false
+    auto_fill: false
+  drug:
+    type: any
+    influence_conversation: false
+    auto_fill: false
+  address:
+    type: any
+    influence_conversation: false
+    auto_fill: false
+  blood_group:
+    type: any
+    influence_conversation: false
+    auto_fill: false
+  email:
+    type: any
+    influence_conversation: false
+    auto_fill: false
+  name:
+    type: any
+    influence_conversation: false
+    auto_fill: false
+  gender:
+    type: any
+    influence_conversation: false
+    auto_fill: false
+  time:
+    type: any
+    influence_conversation: false
+    auto_fill: false
+  username:
+    type: any
+    influence_conversation: false
+    auto_fill: false
+  password:
+    type: any
+    influence_conversation: false 
+    auto_fill: false
+  age:
+    type: any
+    influence_conversation: false
+    auto_fill: false
+  itching:
+    type: any
+    influence_conversation: false
+  skin_rash:
+    type: any
+    influence_conversation: false
+  nodal_skin_eruptions:
+    type: any
+    influence_conversation: false
+  dischromic_patches:
+    type: any
+    influence_conversation: false
+  loss_of_appetite:
+   type: any
+   influence_conversation: false
+  yellowish_skin:
+    type: any
+    influence_conversation: false
+  vomiting:
+    type: any
+    influence_conversation: false
+  indigestion:
+    type: any
+    influence_conversation: false
+  abdominal_pain:
+    type: any
+    influence_conversation: false
+  passage_of_gases:
+    type: any
+    influence_conversation: false
+  internal_itching:
+    type: any
+    influence_conversation: false 
+  fatigue:
+    type: any
+    influence_conversation: false 
+  weight_loss:
+    type: any
+    influence_conversation: false 
+  irregular_sugar_level:
+    type: any
+    influence_conversation: false 
+  obesity:
+    type: any
+    influence_conversation: false 
+  excessive_hunger:
+    type: any
+    influence_conversation: false 
+  increased_appetite:
+    type: any
+    influence_conversation: false  
+  yellowing_of_eyes:
+    type: any
+    influence_conversation: false 
+  restlessness:
+    type: any
+    influence_conversation: false 
+  chest_pain:
+    type: any
+    influence_conversation: false
+  high_fever:
+    type: any
+    influence_conversation: false
+  dehydration:
+    type: any
+    influence_conversation: false
+  username_chk:
+    type: any
+    influence_conversation: false
+  password_chk:
+    type: any
+    influence_conversation: false
+  blurred_and_distorted_vision: 
+    type: any
+    influence_conversation: false  
+  lethargy:
+    type: any
+    influence_conversation: false
+
+
+
+responses:
+  utter_ask_blurred_and_distorted_vision: 
+  - text: do you have blurred_and_distorted_vision?  
+    buttons:
+    - title: "Yes"
+      payload: "blurred_and_distorted_vision"
+    - title: "No"
+      payload: "not_blurred_and_distorted_vision"   
+  utter_ask_lethargy:
+  - text: are you having problem with lack of energy and motivation for physical and mental tasks ?  
+    buttons:
+    - title: "Yes"
+      payload: "lethargy"
+    - title: "No"
+      payload: "not_lethargy"  
+   
+  utter_ask_username_chk:
+  - text: please type your username
+  utter_ask_password_chk:
+  - text: please type your password
+
+  utter_ask_high_fever:
+  - text: do you have high_fever?  
+    buttons:
+    - title: "Yes"
+      payload: "high_fever"
+    - title: "No"
+      payload: "not_high_fever"
+
+  utter_ask_chest_pain:
+   - text: are you having problem with chest_pain?  
+     buttons:
+     - title: "Yes"
+       payload: "chest_pain"
+     - title: "No"
+       payload: "not_chest_pain"
+
+  utter_ask_dehydration:
+  - text: are you having problem with dehydration also?  
+    buttons:
+    - title: "Yes"
+      payload: "dehydration"
+    - title: "No"
+      payload: "not_dehydration"
+
+
+  utter_thinking_awayout:
+  - text: on progress please get back after 2 hour , sorry
+  utter_confirm:
+  - text: you dont need to register i will proceed to the next step
+    buttons:
+    - title: "Continue"
+      payload: "/continue"
+    
+  utter_register: 
+  - text: please register first. 
+    buttons:
+    - title: "register"
+      payload: "/register"
+    - title: "already have an account"
+      payload: "/sign_in"
+
+
+  utter_othersymptom_2:
+  - text: Okay, what other problem are you facing with your health now?
+  utter_othersymptom: 
+  - text: OW! am sorry to hear that, <br> help me answer the following questions by clicking the button and let me check what kind of dieases you might have
+  utter_vomitingslot: 
+  - text: okay, now i will ask you other sympthoms related to vomiting
+  utter_ask_relatedsympthom:
+  - text: sure, can you tell me your initial sympthom you are facing right now ?  
+      
+  utter_ask_dischromic_patches:
+  - text: do you have dischromic_patches?  
+    buttons:
+    - title: "Yes"
+      payload: "dischromic_patches"
+    - title: "No"
+      payload: "not_dischromic_patches"
+  utter_ask_yellowish_skin:
+  - text: do you have yellowish_skin?  
+    buttons:
+    - title: "Yes"
+      payload: "yellowish_skin"
+    - title: "No"
+      payload: "not_yellowish_skin"
+  utter_ask_vomiting:
+  - text: do you have vomiting?  
+    buttons:
+    - title: "Yes"
+      payload: "vomiting"
+    - title: "No"
+      payload: "not_vomiting"
+  utter_ask_indigestion:
+  - text: do you have indigestion?  
+    buttons:
+    - title: "Yes"
+      payload: "indigestion"
+    - title: "No"
+      payload: "not_indigestion"
+  utter_ask_loss_of_appetite:
+  - text: do you have loss_of_appetite?  
+    buttons:
+    - title: "Yes"
+      payload: "loss_of_appetite"
+    - title: "No"
+      payload: "not_loss_of_appetite"
+  utter_ask_abdominal_pain:
+  - text: do you have abdominal_pain?  
+    buttons:
+    - title: "Yes"
+      payload: "abdominal_pain"
+    - title: "No"
+      payload: "not_abdominal_pain"
+  utter_ask_passage_of_gases:
+  - text: do you have passage_of_gases?  
+    buttons:
+    - title: "Yes"
+      payload: "passage_of_gases"
+    - title: "No"
+      payload: "not_passage_of_gases"
+  utter_ask_internal_itching:
+  - text: do you have internal_itching?  
+    buttons:
+    - title: "Yes"
+      payload: "internal_itching"
+    - title: "No"
+      payload: "not_internal_itching"
+  utter_ask_fatigue:
+  - text: do you have fatigue?  
+    buttons:
+    - title: "Yes"
+      payload: "fatigue"
+    - title: "No"
+      payload: "not_fatigue"
+  utter_ask_weight_loss:
+  - text: do you have weight_loss?  
+    buttons:
+    - title: "Yes"
+      payload: "weight_loss"
+    - title: "No"
+      payload: "not_weight_loss"
+  utter_ask_irregular_sugar_level:
+  - text: do you have irregular_sugar_level?  
+    buttons:
+    - title: "Yes"
+      payload: "irregular_sugar_level"
+    - title: "No"
+      payload: "not_irregular_sugar_level"
+  utter_ask_obesity:
+  - text: do you have obesity?  
+    buttons:
+    - title: "Yes"
+      payload: "obesity"
+    - title: "No"
+      payload: "not_obesity"
+  utter_ask_excessive_hunger:
+  - text: do you have excessive_hunger?  
+    buttons:
+    - title: "Yes"
+      payload: "excessive_hunger"
+    - title: "No"
+      payload: "not_excessive_hunger"
+  utter_ask_increased_appetite:
+  - text: do you have increased_appetite?  
+    buttons:
+    - title: "Yes"
+      payload: "increased_appetite"
+    - title: "No"
+      payload: "not_increased_appetite"
+   
+
+
+  utter_ask_itching:
+  - text: do you have itching?  
+    buttons:
+    - title: "Yes"
+      payload: "itching"
+    - title: "No"
+      payload: "not_itching"
+
+  utter_ask_skin_rash:
+  - text: do you have skin_rash?  
+    buttons:
+    - title: "Yes"
+      payload: "skin_rash"
+    - title: "No"
+      payload: "not_skin_rash"
+
+  utter_ask_nodal_skin_eruptions:
+  - text: do you have nodal_skin_eruptions?  
+    buttons:
+    - title: "Yes"
+      payload: "nodal_skin_eruptions"
+    - title: "No"
+      payload: "not_nodal_skin_eruptions"
+
+  utter_ask_continuous_sneezing:
+  - text: do you have continuous_sneezing?  
+    buttons:
+    - title: "Yes"
+      payload: "continuous_sneezing"
+    - title: "No"
+      payload: "not_continuous_sneezing"
+
+  utter_ask_joint_pain:
+  - text: do you have joint_pain?  
+    buttons:
+    - title: "Yes"
+      payload: "joint_pain"
+    - title: "No"
+      payload: "not_joint_pain"     
+
+
+  utter_ask_stomach_pain:
+  - text: do you have stomach_pain?  
+    buttons:
+    - title: "Yes"
+      payload: "stomach_pain"
+    - title: "No"
+      payload: "not_stomach_pain"
+
+
+  utter_invalid_usernm:
+  - text: looks like the username you have provided not found in the database<br> you will be asked to fill again  
+  utter_invalid_passwd:
+  - text: please type again in the format i told you  
+  utter_invalid_u_nm:
+  - text: please type again in the format i told you
+  utter_take_info:
+  - text: can i get your personal information please
+  utter_denyreplay:
+  - text: okay, if you need me am always here
+  utter_ask_username:
+  - text: please create your username and make sure you write in this format(for eg. kimfaiza$721, kfgoddfd$474.....)
+  utter_ask_password:
+  - text: please create a password, make sure you write in this format (for eg. 123434#123, 234323#221...)
+  utter_ask_email:
+  - text: please type your email
+  utter_ask_name:
+  - text: please type your full name
+  utter_ask_address:
+  - text: please type your address
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_default:
+  - text: sorry didnt catch that, please type again
+  utter_didthathelp:
+  - text: did that help??
+  utter_carryon:
+  - text: Greate! carry on.
+  utter_thankyou:
+  - text: My Pleasure &#128522.
+  utter_greet:
+  - text: hello There, welcome to health chatbot. <br>please register first
+    buttons:
+    - title: "register"
+      payload: "/register"
+    - title: "already have an account"
+      payload: "/sign_in"
+  utter_goodbye:
+  - text: Have a nice day &#128522
+  utter_invalid_eml:
+  - text: email must be this type=jolinafau@gmail.com
+  utter_invalid_phone_num:
+  - text: phone number must be 10 digit
+  utter_invalid_tim_fail:
+  - text: please try to write a date in to this format <2020-12-02>
+  
+  utter_vomitadvice:
+  - text: In this case you should do the following <br> 1. on the way for advice...  
+ 
+  utter_adviceFungal infection:
+  - text: for fungal infection You can get some antifungal medicines from a pharmacy without needing a GP prescription
+  utter_adviceAllergy:
+  - text: to treat your skin allergy at home do the following <br>
+          Avoid contact, It might sound obvious,but it’s worth a reminder<br>
+          Don’t wear tight clothes. They can irritate your rash<br>
+          A cool compress or shower can help calm a fiery rash<br>
+  utter_adviceGERD:
+  - text: for GERD(gastroesophageal reflux disease) do the following to treat<br>
+          Maintain a healthy weight<br>
+          Stop smoking<br>
+          Don't lie down after a meal<br>
+          Eat food slowly and chew thoroughly<br>
+          Avoid foods and drinks that trigger reflux<br>
+          Avoid tight-fitting clothing<br>
+  utter_adviceChronic cholestasis:
+  utter_adviceDrug Reaction:
+  utter_advicePeptic ulcer diseae: 
+  utter_adviceAIDS:
+  utter_adviceDiabetes :
+  utter_adviceGastroenteritis:
+  utter_adviceBronchial Asthma :
+  utter_adviceHypertension:
+  utter_adviceMigraine:
+  utter_adviceCervical spondylosis:
+  utter_adviceParalysis (brain hemorrhage):
+  utter_adviceJaundice:
+  utter_adviceMalaria:
+  utter_adviceChicken pox:
+  utter_adviceDengue:
+  utter_adviceTyphoid:
+  utter_advicehepatitis A:
+  utter_adviceHepatitis B:
+  utter_adviceHepatitis C:
+  utter_adviceHepatitis D:
+  utter_adviceHepatitis E:
+  utter_adviceAlcoholic hepatitis:
+  utter_adviceTuberculosis:
+  utter_adviceCommon Cold:
+  utter_advicePneumonia:
+  utter_adviceDimorphic hemmorhoids(piles):
+  utter_adviceHeart attack:
+  utter_adviceVaricose veins:
+  utter_adviceHypothyroidism:
+  utter_adviceHyperthyroidism:
+  utter_adviceHypoglycemia:
+  utter_adviceOsteoarthristis:
+  utter_adviceArthritis:
+  utter_advice(vertigo) Paroymsal  Positional Vertigo: 
+  utter_adviceAcne:
+  utter_adviceUrinary tract infection:
+  utter_advicePsoriasis:
+  utter_adviceImpetigo:
+
+
+
+actions:
+#- utter_faq
+- action_db_status_update
+- action_selectdb_chk
+- action_advice
+- check_intent_no
+- action_predictvomiting
+- action_predictrestlness
+- action_predictyelloweye
+- action_predictitching
+- action_sympthomslotcheck
+- action_machinepredict
+- utter_take_info
+- action_drugdescription
+- action_email_patient
+- action_insert_userinfo
+- action_sympthon_description
+- utter_ask_email
+- utter_ask_name
+- utter_goodbye
+- utter_greet
+- utter_invalid_eml
+- utter_invalid_phone_num
+- utter_notfound
+- utter_thankyou
+- utter_please_rephrase
+- validate_userdata_form
+- validate_login_form
+- validate_prediction1_form
+- validate_prediction2_form
+- validate_prediction3_form
+- validate_prediction4_form
+
+forms:
+  userdata_form:
+    name:
+    - type: from_text
+      intent: name
+    email:
+    - type: from_entity
+      entity: email
+    username:
+    - type: from_entity
+      entity: username
+    password:
+    - type: from_entity
+      entity: password
+  login_form:
+    username_chk:
+    - type: from_entity
+      entity: username
+    password_chk:
+    - type: from_entity
+      entity: password
+
+  predictio1itching_form:
+    skin_rash:
+    - type: from_text
+      intent: sympthon
+    nodal_skin_eruptions:
+    - type: from_text
+      intent: sympthon
+    dischromic_patches:
+    - type: from_text 
+      intent: sympthon
+
+  predictio2yellowingofeye_form:
+    abdominal_pain:
+    - type: from_text
+      intent: sympthon
+    loss_of_appetite:
+    - type: from_text
+      intent: sympthon
+    yellowish_skin:
+    - type: from_text
+      intent: sympthon
+    vomiting:
+    - type: from_text
+      intent: sympthon
+
+  predictio3vomiting_form:
+    indigestion:
+    - type: from_text
+      intent: sympthon
+    loss_of_appetite:
+    - type: from_text
+      intent: sympthon
+    abdominal_pain:
+    - type: from_text
+      intent: sympthon
+    passage_of_gases:
+    - type: from_text
+      intent: sympthon 
+    internal_itching:
+    - type: from_text
+      intent: sympthon
+    chest_pain:
+    - type: from_text
+      intent: sympthon
+    high_fever:
+    - type: from_text
+      intent: sympthon
+    dehydration:
+    - type: from_text
+      intent: sympthon
+
+
+
+
+  predictio4restlessness_form:
+    fatigue:
+    - type: from_text
+      intent: sympthon
+    weight_loss:
+    - type: from_text
+      intent: sympthon
+    irregular_sugar_level:
+    - type: from_text
+      intent: sympthon
+    obesity:
+    - type: from_text
+      intent: sympthon
+    excessive_hunger:
+    - type: from_text
+      intent: sympthon  
+    increased_appetite:
+    - type: from_text
+      intent: sympthon
+    blurred_and_distorted_vision:
+    - type: from_text
+      intent: sympthon
+    lethargy:
+    - type: from_text
+      intent: sympthon  
+
+      
+version: '2.0'
+
+ 
+ 
+  
+
+  
+
+  
+
+  
+
+
+ 
+

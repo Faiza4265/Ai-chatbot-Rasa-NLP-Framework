@@ -1,0 +1,51 @@
+version: "2.0"
+stories:
+- story: happy thankyou path
+  steps:
+  - intent: thankyou
+  - action: utter_thankyou
+
+- story: happy goodbye path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye  
+
+- story: happy treatment for registeration and vomitting initial path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: register
+  - action: userdata_form
+  - active_loop: userdata_form
+  - active_loop: null
+  - action: action_insert_userinfo
+  - intent: vomitting_initial
+  - action: utter_othersymptom
+  - action: predictio3vomiting_form
+  - active_loop: predictio3vomiting_form
+  - active_loop: null
+  - action: action_predictvomiting
+  - intent: thankyou
+  - action: utter_thankyou
+
+
+- story: happy login and checking if a user is better and another user problem path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: sign_in
+  - action: login_form
+  - active_loop: login_form
+  - active_loop: null
+  - action: action_selectdb_chk
+  - intent: affirm1
+  - action: action_db_status_update
+  - intent: restlnes_initial
+  - action: utter_othersymptom
+  - action: predictio4restlessness_form
+  - active_loop: predictio4restlessness_form
+  - active_loop: null
+  - action: action_predictrestlness
+  - action: utter_vomitadvice
+  - intent: thankyou
+  - action: utter_thankyou

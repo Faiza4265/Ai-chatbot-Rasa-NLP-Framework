@@ -1,0 +1,722 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - ho
+    - good morning
+    - good evening
+    - hey there
+    - hola
+    - Bonjour
+    - Hey!
+    - hello there
+    - halo
+    - hy
+    - ho
+    - kamusta
+    - selam
+    - aloha
+    - pis
+
+
+- intent: affirm1
+  examples: |
+    - yes
+    - yes
+    - Yes
+    - YEs
+    - YES
+    - sure
+    - yes, of course
+    - ya
+    - ya correct
+    - nice yes
+    - thats nice ya
+    - thats nice
+
+- intent: another_sickness
+  examples: |
+    - i still didnt get better
+    - am still didnt get better
+    - am still facing a problem with this dieases
+    - i think i am having different sympthoms
+    - can you ask me again, am having different sympthoms than the last one
+    - am having other sympthoms again
+    - ask me again am having another sympthoms 
+    - i think am still facing another sympthoms 
+    - can you please ask me again since i might have another sympthoms 
+ 
+- intent: deny1
+  examples: |
+    - NO
+    - No
+    - no
+    - nO
+    - no , i dont
+    - no, i dont want to continue
+    - i dont
+    - nah
+    - naah
+    - nahh
+    - nop
+
+- intent: question
+  examples: |
+    - i have a question
+    - can you answer to my question?
+    - i want to ask you something?
+    - can i ask you something?
+    - have a question
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later   
+
+- intent: sympthon
+  examples: |
+    - itching
+    - skin_rash
+    - not_itching
+    - not_skin_rash
+    - nodal_skin_eruptions
+    - continuous_sneezing
+    - not_nodal_skin_eruptions
+    - not_continuous_sneezing
+    - shivering
+    - chills
+    - not_shivering
+    - not_chills
+    - joint_pain
+    - stomach_pain
+    - not_joint_pain
+    - not_stomach_pain
+    - acidity
+    - ulcers_on_tongue
+    - muscle_wasting
+    - vomiting
+    - burning_micturition
+    - spotting_ urination
+    - fatigue
+    - weight_gain
+    - anxiety
+    - cold_hands_and_feets
+    - mood_swings
+    - weight_loss
+    - restlessness
+    - lethargy
+    - patches_in_throat
+    - irregular_sugar_level
+    - cough
+    - not_acidity
+    - not_ulcers_on_tongue
+    - not_muscle_wasting
+    - not_vomiting
+    - not_burning_micturition
+    - not_spotting_ urination
+    - not_fatigue
+    - not_weight_gain
+    - not_anxiety
+    - not_cold_hands_and_feets
+    - not_mood_swings
+    - not_weight_loss
+    - not_restlessness
+    - not_lethargy
+    - not_patches_in_throat
+    - not_irregular_sugar_level
+    - not_cough
+    - high_fever
+    - sunken_eyes
+    - breathlessness
+    - sweating
+    - dehydration
+    - indigestion
+    - headache
+    - yellowish_skin
+    - dark_urine
+    - nausea
+    - loss_of_appetite
+    - pain_behind_the_eyes
+    - back_pain
+    - constipation
+    - abdominal_pain
+    - diarrhoea
+    - mild_fever
+    - yellow_urine
+    - not_high_fever
+    - not_sunken_eyes
+    - not_breathlessness
+    - not_sweating
+    - not_dehydration
+    - not_indigestion
+    - not_headache
+    - not_yellowish_skin
+    - not_dark_urine
+    - not_nausea
+    - not_loss_of_appetite
+    - not_pain_behind_the_eyes
+    - not_back_pain
+    - not_constipation
+    - not_abdominal_pain
+    - not_diarrhoea
+    - not_mild_fever
+    - not_yellow_urine
+    - yellowing_of_eyes
+    - acute_liver_failure
+    - fluid_overload
+    - swelling_of_stomach
+    - swelled_lymph_nodes
+    - malaise
+    - blurred_and_distorted_vision
+    - phlegm
+    - throat_irritation
+    - redness_of_eyes
+    - sinus_pressure
+    - runny_nose
+    - congestion
+    - chest_pain
+    - weakness_in_limbs
+    - fast_heart_rate
+    - pain_during_bowel_movements
+    - pain_in_anal_region
+    - bloody_stool
+    - irritation_in_anus
+    - neck_pain
+    - dizziness
+    - not_yellowing_of_eyes
+    - not_acute_liver_failure
+    - not_fluid_overload
+    - not_swelling_of_stomach
+    - not_swelled_lymph_nodes
+    - not_malaise
+    - not_blurred_and_distorted_vision
+    - not_phlegm
+    - not_throat_irritation
+    - not_redness_of_eyes
+    - not_sinus_pressure
+    - not_runny_nose
+    - not_congestion
+    - not_chest_pain
+    - not_weakness_in_limbs
+    - not_fast_heart_rate
+    - not_pain_during_bowel_movements
+    - not_pain_in_anal_region
+    - not_bloody_stool
+    - not_irritation_in_anus
+    - not_neck_pain
+    - not_dizziness
+    - cramps
+    - bruising
+    - obesity
+    - swollen_legs
+    - swollen_blood_vessels
+    - puffy_face_and_eyes
+    - enlarged_thyroid
+    - brittle_nails
+    - swollen_extremeties
+    - excessive_hunger
+    - extra_marital_contacts
+    - drying_and_tingling_lips
+    - slurred_speech
+    - knee_pain
+    - hip_joint_pain
+    - muscle_weakness
+    - stiff_neck
+    - swelling_joints
+    - movement_stiffness
+    - spinning_movements
+    - loss_of_balance
+    - unsteadiness
+    - weakness_of_one_body_side
+    - loss_of_smell
+    - not_bruising
+    - not_cramps
+    - not_obesity
+    - not_swollen_legs
+    - not_swollen_blood_vessels
+    - not_puffy_face_and_eyes
+    - not_enlarged_thyroid
+    - not_brittle_nails
+    - not_swollen_extremeties
+    - not_excessive_hunger
+    - not_extra_marital_contacts
+    - not_drying_and_tingling_lips
+    - not_slurred_speech
+    - not_knee_pain
+    - not_hip_joint_pain
+    - not_muscle_weakness
+    - not_stiff_neck
+    - not_swelling_joints
+    - not_movement_stiffness
+    - not_spinning_movements
+    - not_loss_of_balance
+    - not_unsteadiness
+    - not_weakness_of_one_body_side
+    - not_loss_of_smell
+    - bladder_discomfort
+    - foul_smell_of urine
+    - continuous_feel_of_urine
+    - passage_of_gases
+    - internal_itching
+    - toxic_look_(typhos)
+    - depression
+    - irritability
+    - muscle_pain
+    - altered_sensorium
+    - red_spots_over_body
+    - belly_pain
+    - abnormal_menstruation
+    - dischromic _patches
+    - watering_from_eyes
+    - increased_appetite
+    - polyuria
+    - family_history
+    - mucoid_sputum
+    - rusty_sputum
+    - lack_of_concentration
+    - visual_disturbances
+    - not_bladder_discomfort
+    - not_foul_smell_of urine
+    - not_continuous_feel_of_urine
+    - not_passage_of_gases
+    - not_internal_itching
+    - not_toxic_look_(typhos)
+    - not_depression
+    - not_irritability
+    - not_muscle_pain
+    - not_altered_sensorium
+    - not_red_spots_over_body
+    - not_belly_pain
+    - not_abnormal_menstruation
+    - not_dischromic _patches
+    - not_watering_from_eyes
+    - not_increased_appetite
+    - not_polyuria
+    - not_family_history
+    - not_mucoid_sputum
+    - not_rusty_sputum
+    - not_lack_of_concentration
+    - not_visual_disturbances
+    - receiving_blood_transfusion
+    - receiving_unsterile_injections
+    - coma
+    - stomach_bleeding
+    - distention_of_abdomen
+    - history_of_alcohol_consumption
+    - fluid_overload.1
+    - blood_in_sputum
+    - prominent_veins_on_calf
+    - palpitations
+    - painful_walking
+    - pus_filled_pimples
+    - blackheads
+    - scurring
+    - skin_peeling
+    - silver_like_dusting
+    - small_dents_in_nails
+    - inflammatory_nails
+    - blister
+    - red_sore_around_nose
+    - yellow_crust_ooze
+    - not_receiving_blood_transfusion
+    - not_receiving_unsterile_injections
+    - not_coma
+    - not_stomach_bleeding
+    - not_distention_of_abdomen
+    - not_history_of_alcohol_consumption
+    - not_fluid_overload.1
+    - not_blood_in_sputum
+    - not_prominent_veins_on_calf
+    - not_palpitations
+    - not_painful_walking
+    - not_pus_filled_pimples
+    - not_blackheads
+    - not_scurring
+    - not_skin_peeling
+    - not_silver_like_dusting
+    - not_small_dents_in_nails
+    - not_inflammatory_nails
+    - not_blister
+    - not_red_sore_around_nose
+    - not_yellow_crust_ooze
+
+- intent: thankyou
+  examples: |
+    - thank you
+    - thanks , i will do that
+    - thanks 
+    - thank you so much 
+    - wow, thank you so much
+    - thats nice thanks buddy
+    - thanks, thats nice 
+    - nice, thank you so much
+    - nice thank you
+    - Thank you, you're amazing!
+    - Thank you kindly
+    - Many thanks
+    - Thanks a million
+    - I'm so thankful for everything you bring to the table
+    - That’s very kind of you. Thank you
+    - It’s very kind of you
+    - I really appreciate your help
+    - I’m so grateful
+    - Thanks a lot
+    - A million thanks to you
+    - Thanks a ton
+    - You are the best
+
+- intent: deny
+  examples: |
+    - no
+    - nop
+    - no, i dont want to
+    - dont
+    - no am done
+    - no, am done 
+    - am done 
+    - i dont want to
+    - no please
+    - no please am done 
+    - i dont want to
+
+- intent: affirm
+  examples: |
+    - yes,thats awesome 
+    - yes, very much
+    - yes, greate
+    - yes
+    - ofcourse
+    - confirm
+    - sure
+    - great
+    - ok
+    - okay
+    - oky
+    - okk
+    - k 
+
+- intent: affirm_1
+  examples: |
+    - yes
+    - ya
+    - Yes
+    - YES
+    - yess
+
+- intent: age
+  examples: |    
+    - 
+
+- intent: treatment
+  examples: |
+    - can you diagonise me 
+    - can you make some diagonises for me please
+    - i want some treatment form you
+    - make some diagonisis please 
+    - i need some treatment please
+    - treate me please    
+
+- intent: name
+  examples: |
+    - my name am [ms. faiza abella](name)
+    - am [ms. iman abella](name)
+    - i am [ms. nuria mohammed](name)
+    - am [ms. faiza mohammed](name)
+    - [mr. abdella yuya](name)
+    - [ms. fakiha shekur](name)
+    - [mr. zolch negash](name)
+    - [ms. makelet mesfen](name)
+    - [ms. naru danu](name)
+    - [ms. danu melash](name)
+    - [ms. maru geberehiwot](name)
+    - [mr. fekede nega](name)
+    - [mr. demese ayalew](name)
+    - [dr. abdulhafiz abdella](name)
+    - [ms. hikmet abdella](name)
+    - [mr. arsid senay](name)
+    - [mr. kola kela](name)
+    - [ms. kula hassen](name)
+
+- intent: email
+  examples: |
+    - this is my email jolinafai@gmail.com
+    - sure my email is jolinafai@gmail.com
+    - sure and this is my email jolinafai@gmail.com
+    - my email is jolinafai@gmail.com    
+
+- intent: choose_time
+  examples: |
+    - today
+    - tommorow
+    - next week
+    - next month
+    - maybe now
+    - today at 5pm
+    - 2014-10-01
+    - the last Tuesday of October 2012
+    - twenty five minutes ago
+    - the day before labor day 2020
+    - June 10-11 (interval)
+    - third monday after christmas 1980
+    - today
+    - Monday, Feb 18
+    - the 1st of march
+    - last week
+    - a quarter to noon
+    - 11:45am
+    - three months ago
+    - next 3 weeks
+    - thanksgiving
+    - Mother’s Day
+    - from 9:30 - 11:00 on Thursday
+    - the day before labor day 2020
+
+- intent: address
+  examples: |
+    - my address is [bote](address)
+    - my address is [shenkore](address)
+    - i think my address is [bote](address)
+    - am from [bira](address)
+    - my address is from [shash garaz](address)
+  
+- lookup: address
+  examples: |
+    - bote
+    - shash garaz
+    - shash
+    - shenkore
+    - andegna menged
+    - shewaber
+    - haramaya
+    - alamaya
+    - aweday
+    - arategna
+    - gebrna mazoria
+    - gbrna mazoria
+    - fedis
+    - fedis menged
+    - chelenko
+
+- regex: password
+  examples: |
+    - \b[A-Z]{2}#\d{5}\b
+- intent: password
+  examples: |
+    - [DS#12345](password)
+    - [DW#23234](password)
+    - [AS#12344](password)
+    - [DA#44345](password)
+    - [FF#55534](password)
+    - [VC#44444](password)
+    - [XC#12123](password)
+    - [BN#23544](password)
+    - [WE#12333](password)
+    - [QW#18885](password)
+    - [NN#23234](password)
+    - [OL#11224](password)
+
+- regex: username
+  examples: |
+    - \b[A-Z]{4}-\d{3}\b
+- intent: username
+  examples: |
+    - [ADAC-721](username)
+    - [FAIZ-232](username)
+    - [IMAN-123](username)
+    - [LOLO-234](username)
+    - [WAKO-123](username)
+    - [VELO-234](username)
+    - [SITI-898](username)
+    - [MANA-111](username)
+
+- intent: feelingsickcold
+  examples: |
+    - I'm not feeling well, I caught a cold
+    - I think I am going to be sick becouse of cold
+    - I caught a cold
+    - I've caught a cold
+    - I have come down with a cold
+    - I think that I have come down with the flu
+    - I feel terrible. I think I have the flu
+    - I have the flu
+    - I think I’ve caught a cold, what should i do?
+    - i think am haing a cold, what should i do?
+    - i think am having a cold what should i do?
+
+- intent: nlu_fallback
+  examples: |
+    - skdhfsdfhsl iuhfldufhdxf ksjhfkdhf
+    - colash piss off me ya
+    - trying to write
+    - hold my breath yes go ahade lol
+
+  
+- intent: faq/ask_aboutinsulin
+  examples: |
+    - Will a person with Type 2 diabetes under control end up with the need for insulin?
+    - Will a person with regulated Type 2 diabetes end up with the need for insulin? 
+    - Will a person with regulated type 2 diabetes end up with the need for insulin?
+    - Will the need for insulin end with a person with type 2 diabetes under control?
+    - Will a person with regulated Type 2 diabetes end up with the need for insulin?
+    - in what case a person ended up with the need for insulin
+    - what would happent to a person with type 2 diabetes
+    - do a peoples with type 2 diabets actually need insulin
+    - does peoples with type 2 diabets under control needs insulin?
+    - is it nesscesary for a peoples that are under control for type 2 diabets to have insulin?
+    - is it nesscesary for a peoples that are under control for type 2 diabets needed to have insulin?
+    
+- intent: faq/ask_aboutcalories    
+  examples: |
+    - Do calories from hard liquor add just as much caloric energy/fat as calories from other sources? What are "empty calories" so many people refer to?
+    - what are empty calories that so many peoples refer to?
+    - what is the defference between the calories from hard liquor and calories from other resourses
+    - Do calories from hard liquor add just as much caloric energy/fat as calories from other sources?
+    - tell me about the calories from hard liquor
+    - does calories from hard liquor add a lot of energy/fat?
+    - does calories from hard liquor add much energy/fat as much as other calories from other sources?
+    - what is the empty calories that many peoples refer too?
+
+- intent: faq/ask_aboutvegan
+  examples: |
+    - Can a vegan diet cause lupus patient to go into remission?     
+    - what will happen to a lupus patient if he/she goes through vegan diet
+    - can a vegeterian diet make a lupus patient go into remission
+    - will a vegan diet cause a lupus patient to to through remission?
+    - will a lupus patient go into remission with a vegan diet?
+    - will a lupus patient go into remission with if he/she is vegan diet
+
+- intent: faq/ask_aboutstroke    
+  examples: |
+    - Is there a genetic factor to strokes?
+    - what is a genetic factor for a stroke?
+    - genetic factor to a stroke
+    - does stroke has genetic factor?
+    - is there a genetic factor for a stroke?
+    - genetic factor for a stroke
+    - tell me about genetic factor to a stroke if exists
+    - genetic factor of a stroke
+
+- intent: faq/ask_aboutasthma
+  examples: |
+    - What medications are best for the treatment of asthma? What are their side effects?
+    - What medications are best for the treatment of asthma?
+    - what are the side effect of asthma medication?
+    - tell me the side effect for asthma medication
+    - what is the side effect and best treatment for asthma medication?
+    - tell me the best medication for the traatment of asthma
+    - what medication is the best way to treat asthma and as well as their side effect?
+    - the best medication to treat asthma and their side effect 
+    - best medication for asthma and their side effect 
+    - what medication are best for treatment of asthma and their side effect 
+
+- intent: faq/ask_aboutspineblockinjection
+  examples: |
+    - What exactly is a spine block injection? Will it work long-term for low back pain due to disc problems?
+    - What exactly is a spine block injection?
+    - can you tell me about spine block injection? and how long will it work for low back pain due to disc problem
+    - for low back pain due to disc problem how long spine blockk injection works
+    - will a spine block injection work long-term for low back pain that is due to disc problem?
+    - tell me about spine block injection and if it works long-term for a low back pain which is cased by disc problem
+    - what is spine block injection and for how long will it work for low back pain?
+    - what is spine block injection and for how long will it work for low back pain due to disc problem
+
+- intent: faq/ask_abouteatingmotivtool  
+  examples: |
+    - Can you recommend any tools that will help me stay motivated to stay on my eating plan?
+    - tell me some recommnded tools that will help me to stay motivated on my eating plan
+    - what recommended tools are there for staying motivated on eating plan
+    - to stay on my eating plan please recommend me some motivational tools 
+    - i need some motivational tools that can help me stay on my eating plan
+    - can you please recommend me some motivational tools that can help me stay on my eating plan
+    - to stick on my eating plan , please recommend me some tool that can motivate me 
+    - motivational tools that can help me stay stick on my eating plan
+    - can you give me some tools that can motivate me to stay on my eating plan
+
+- intent: faq/ask_aboutmalaria  
+  examples: |  
+    - if i have [malaria](sympthom) what can i do first
+    - how to deal with [malaria](sympthom)  
+    - what can i do if i have [malaria](sympthom)?
+    - if a person has [malaria](sympthom) what can you suggest?
+    - a person with [malaria](sympthom)?
+    - if a person has [malaria](sympthom) what can you suggest to do
+    - i have [malaria](sympthom) and what should i do first?
+    - having [malaria](sympthom) what can you suggest?
+    - what do you suggest to a person with [malaria](sympthom)?
+    - can you tell me about the symptom [malaria](sympthom)
+    - tell me more about the sympthom [malaria](sympthom)
+    - what is [malaria](sympthom)
+    - i want to know the what [Malaria](sympthom) sympthom is
+
+- intent: itching_initial  
+  examples: |  
+    - am having a itching pain
+    - my body keeps itching me
+    - am having a problem with itching
+    - itching 
+    - am having a problem with itching 
+    - this days am having problem with itching 
+
+- intent: restlnes_initial  
+  examples: | 
+    - this days am having problem with not sleeping 
+    - am having inability to rest or relax
+    - i cant rest or relax this days 
+    - am having a problem of resting this days
+    - i cant relax or rest this days 
+    - this time i am having problems with resting
+    - this time am having problem with rest or relax
+    - this time am having problem to rest or relax
+    - this time am having inability to rest or relax
+    - this time i cant rest or relax this days 
+    - this time am having a problem of resting this days
+    - this time i cant relax or rest and i dont know why 
+
+- intent: sikness  
+  examples: |   
+    - i am very sick this days 
+    - am really sick 
+    - am having a problem with my health this days 
+    - am really sick this days 
+    - i am very sick, can you help me please  
+
+- intent: vomitting_initial  
+  examples: | 
+    - i keep vommiting this days 
+    - i cant stop vommiting this days 
+    - i cant stop vomitting 
+    - vommiting 
+    - am having a problem with vommiting 
+    - am having problem with stomach pain and i keep vommiting 
+
+- intent: yellowingofeye_initial  
+  examples: |       
+    - i dont know but my eyes are kind of yellow 
+    - am having a yellow eye
+    - yellowing eyes 
+    - am having a problem with yellow eye
+
+- intent: register  
+  examples: | 
+    - register
+    - regster
+    - reguster     
+
+- intent: sign_in  
+  examples: | 
+    - sign_in
+    - already have an account
+    - already have account  
+
+- intent: continue  
+  examples: | 
+    - continue
+    - continuee
+    - Continue
+
+    
